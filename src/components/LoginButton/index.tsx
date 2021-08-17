@@ -4,7 +4,7 @@ import './style.css';
 
 
 const LoginButton = () => {
-    const MY_WEBSITE: string = "https://spotifynya-brian.vercel.app/callback"
+    const MY_WEBSITE: string = "http://localhost:3000/callback"
     const REDIRECT_URL: string = `https://accounts.spotify.com/authorize?client_id=${process.env.REACT_APP_CLIENT_ID}&response_type=token&redirect_uri=${MY_WEBSITE}&scope=playlist-modify-private`
 
     return (
