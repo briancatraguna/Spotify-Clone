@@ -23,7 +23,11 @@ const HomePage = () => {
 
     const pushToSelectedList = (id: string) => {
         const currentList: string[] = selectedList;
-        currentList.push(id);
+        if (currentList[0] === ""){
+            currentList[0] = id;
+        } else{
+            currentList.push(id);
+        }
         setSelectedList(currentList);
     }
 
