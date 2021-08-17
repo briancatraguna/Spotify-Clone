@@ -1,0 +1,91 @@
+.itemContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 30px;
+    width: 370px;
+    height: 350px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: #252525;
+}
+
+img {
+    border-radius: 20px;
+    width: 150px;
+    align-self: center;
+}
+
+.songTitle {
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.artist {
+    font-size: 15px;
+    color: #a6a6a6;
+}
+
+.artist:hover {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.selectButton {
+    width: 300px;
+    align-self: center;
+    margin-top: 7px;
+    background-color: #1ed760;
+    border: 1px solid #010000;
+    color: #010000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.selectButton:hover {
+    width: 300px;
+    align-self: center;
+    margin-top: 7px;
+    background-color: #010000;
+    border: 1px solid #1ed760;
+    color: #1ed760;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.deselectButton {
+    width: 300px;
+    align-self: center;
+    margin-top: 7px;
+    background-color: #d71e1e;
+    border: 1px solid #010000;
+    color: #010000;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.deselectButton:hover {
+    width: 300px;
+    align-self: center;
+    margin-top: 7px;
+    background-color: #010000;
+    border: 1px solid #d71e1e;
+    color: #d71e1e;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+}
