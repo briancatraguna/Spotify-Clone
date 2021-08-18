@@ -1,10 +1,7 @@
-.button {
-    margin-top: 10px;
-    -webkit-appearance: button;
-    -moz-appearance: button;
-    appearance: button;
-    text-decoration: none;
-    color: initial;
-    width: 100px;
+.myButton {
+    margin-top: 300px;
+    width: 300px;
     height: 50px;
+    position: absolute;
+    top: 50%;
 }

@@ -3,3 +3,10 @@
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: space-evenly;
 }
+
+.container {
+    height: 650px;
+    background-image: url('https://cdn.vox-cdn.com/thumbor/GJf__effX-aD6w538paYxRaoHhY=/1400x1400/filters:format(jpeg)/cdn.vox-cdn.com/uploads/chorus_asset/file/10224897/acastro_180213_1777_0003.jpg');
+    background-repeat:initial;
+    background-size: auto;
+}

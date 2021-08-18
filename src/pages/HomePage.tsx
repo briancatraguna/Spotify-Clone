@@ -72,7 +72,7 @@ const HomePage = () => {
                 <SongItem
                     key = {item.id}
                     imgUrl = {item.album.images[0].url}
-                    songTitle = {item.album.name}
+                    songTitle = {item.name}
                     artist = {item.artists[0].name}
                     artistLink = {item.artists[0].external_urls.spotify}
                     id = {item.uri}
@@ -88,7 +88,7 @@ const HomePage = () => {
     return(
         <div className="App">
             <CreatePlaylistForm userId={userId} selectedTracks={selectedList}></CreatePlaylistForm>
-            <SectionTitle title="Search your favorite albums!"/>
+            <SectionTitle title="Search your favorite tracks!"/>
             <br></br>
             <SearchBar getData={getData}></SearchBar>
             <br></br>

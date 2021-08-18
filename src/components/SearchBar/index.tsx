@@ -30,6 +30,7 @@ const SearchBar = ({getData}: Props) => {
                         'Authorization': accessTokenBearer
                     }
                 })
+                console.log(response.data);
                 getData(response.data);
             } catch(error){
                 console.error(error);

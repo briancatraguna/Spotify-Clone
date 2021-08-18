@@ -9,7 +9,7 @@ const LoginButton = () => {
 
     return (
         <a href={REDIRECT_URL}>
-            <Button variant="contained" color="primary" className="button">Login</Button>
+            <Button variant="contained" color="primary" className="myButton">Login</Button>
         </a>
     )
     
