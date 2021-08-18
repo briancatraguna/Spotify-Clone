@@ -10,3 +10,7 @@
     background-repeat:initial;
     background-size: auto;
 }
+
+.topNav {
+    display: inline;
+}

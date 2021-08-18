@@ -63,7 +63,6 @@ const CreatePlaylistForm = ({userId,selectedTracks}: Props) => {
     }
     return (
         <div>
-            <h3>Create Playlist</h3>
             <form onSubmit={handleSubmit}>
                 <TextField className="textField" variant="outlined" label="Title" onChange={handleTitle}/>
                 <TextField className="textField" variant="outlined" label="Description" onChange={handleDescription}/>

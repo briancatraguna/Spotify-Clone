@@ -12,6 +12,7 @@ const HomePage = () => {
     
     const {accessTokenBearer} = useSelector((state: any) => state.token)
 
+    console.log(accessTokenBearer)
     const initialData: any = null
     const [data,setData] = useState(initialData);
     const [selectedList,setSelectedList] = useState([""]);
