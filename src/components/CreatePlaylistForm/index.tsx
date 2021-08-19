@@ -49,8 +49,9 @@ const CreatePlaylistForm = ({userId,selectedTracks}: Props) => {
                       "Accept": "application/json",
                       "Content-Type": "application/json"
                     }
+                  }).then(()=>{
+                      alert(`Succesfully created ${title} playlist!`)
                   })
-                  alert(`Submitted ${title} playlist!`)
             } catch(error){
                 console.error(error);
             }
