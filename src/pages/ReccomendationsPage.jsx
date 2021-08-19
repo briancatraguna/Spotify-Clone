@@ -1,31 +1,45 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 import TopNavBar from '../components/TopNavBar';
+import { MenuItem, Select } from '@material-ui/core';
+import './style.css'
 
 const ReccomendationsPage = () => {
 
     const {accessTokenBearer} = useSelector((state) => state.token);
+    const [genres,setGenres] = useState([])
 
-    console.log(accessTokenBearer);
     const GENRES_BASE_URL = "https://api.spotify.com/v1/recommendations/available-genre-seeds"
 
-    const response = axios.get(GENRES_BASE_URL,{
-        headers: {
-            Authorization: accessTokenBearer
-        }
-    })
+    async function getGenres(){
+        const response = await axios.get(GENRES_BASE_URL,{
+            headers: {
+                Authorization: accessTokenBearer
+            }
+        })
+        setGenres(response.data.genres)
+    }
 
-    console.log(response.data)
+    useEffect(() => {
+        getGenres()
+      }, []); 
 
-    // const SEED_ARTISTS = "4NHQUGzhtTLFvgF5SZesLK";
-    // const SEED_TRACKS = "0c6xIDDpzE81m2q797ordA";
-    
+    let selectComponent;
+    if (genres.length>0 || genres==null){
+        selectComponent = <Select className="selectStyle" labelId="label" id="genres">
+            {genres.map((item)=>{
+                return <MenuItem key={item} value={item}>{item}</MenuItem>
+            })}
+            <MenuItem value="hello">Hello</MenuItem>
+        </Select>
+    }
 
     return (
         <div>
             <TopNavBar title='recommendation'/>
             <h1>This is recomendations</h1>
+            {selectComponent}
         </div>
     )
 }

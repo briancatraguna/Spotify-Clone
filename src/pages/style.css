@@ -14,3 +14,8 @@
 .topNav {
     display: inline;
 }
+
+.selectStyle {
+    background-color: darkgray;
+    color: black;
+}
