@@ -1,4 +1,4 @@
-# [Brian's - Spotify 🎶](brians-spotify.vercel.app)
+# [Brian's - Spotify 🎶](https://brians-spotify.vercel.app)
 
 ## About The Project
 This is an Frontend Web App to search your own favorite songs and create your own playlists with Spotify! You can also find recommendations of songs from different genres. The project uses the [Spotify Web API](https://developer.spotify.com/documentation/web-api/) to interact with Spotify.
