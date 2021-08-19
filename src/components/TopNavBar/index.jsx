@@ -1,53 +1,28 @@
-import React, { useState } from "react";
+import React from 'react';
 import PropTypes from 'prop-types';
 import './style.css'
+import {Link} from 'react-router-dom';
 
 const TopNavBar = (props) => {
 
-    const [page,setPage] = useState(props.title)
-
-    function setReccomendation(){
-        setPage("reccomendation")
-    }
-
-    function setHome(){
-        setPage("home")
-    }
-
-    if (page == "home"){
-        return(
+    if (props.title == "home"){
+        return (
             <div className="containerTopNavBar">
                 <h2 className="selected">Create Playlists</h2>
-                <h2 className="unselected" onClick={setReccomendation}>Reccomendations</h2>
+                <Link to='/recommendations'>
+                    <h2 className="unselected">Reccomendations</h2>
+                </Link>
             </div>
         )
     }
-    return(
+    return (
         <div className="containerTopNavBar">
-            <h2 className="unselected" onClick={setHome}>Create Playlists</h2>
+            <Link to='create-playlist'>
+                <h2 className="unselected">Create Playlists</h2>
+            </Link>
             <h2 className="selected">Reccomendations</h2>
         </div>
     )
-    
-
-    // if (props.title == "home"){
-    //     return (
-    //         <div className="containerTopNavBar">
-    //             <h2 className="selected">Create Playlists</h2>
-    //             <a href="http://localhost:3000/reccomendations">
-    //                 <h2 className="unselected" onClick={}>Reccomendations</h2>
-    //             </a>
-    //         </div>
-    //     )
-    // }
-    // return (
-    //     <div className="containerTopNavBar">
-    //         <a href="http://localhost:3000/create-playlist">
-    //         <h2 className="unselected">Create Playlists</h2>
-    //         </a>
-    //         <h2 className="selected">Reccomendations</h2>
-    //     </div>
-    // )
 }
 
 export default TopNavBar;

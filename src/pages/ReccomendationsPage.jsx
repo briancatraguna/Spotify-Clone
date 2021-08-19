@@ -1,6 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import TopNavBar from '../components/TopNavBar';
 
 const ReccomendationsPage = () => {
 
@@ -22,7 +23,10 @@ const ReccomendationsPage = () => {
     
 
     return (
-        <h1>This is recomendations</h1>
+        <div>
+            <TopNavBar title='recommendation'/>
+            <h1>This is recomendations</h1>
+        </div>
     )
 }
 

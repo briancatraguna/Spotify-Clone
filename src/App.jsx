@@ -10,6 +10,7 @@ import { useDispatch } from 'react-redux';
 import { getToken } from './redux/token';
 import LoginPage from './pages/LoginPage.jsx';
 import { ThemeProvider } from '@material-ui/core';
+import ReccomendationsPage from './pages/ReccomendationsPage';
 
 
 function App() {
@@ -48,6 +49,9 @@ function App() {
             <Switch>
               <Route exact path="/create-playlist">
                 <HomePage/>
+              </Route>
+              <Route exact path="/recommendations">
+                <ReccomendationsPage/>
               </Route>
               <Route exact path="/">
                 {loginComponent}

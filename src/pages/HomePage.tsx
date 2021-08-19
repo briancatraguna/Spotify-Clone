@@ -7,6 +7,7 @@ import CreatePlaylistForm from '../components/CreatePlaylistForm/index';
 import axios, { AxiosResponse } from 'axios';
 import './style.css';
 import { useSelector } from 'react-redux';
+import TopNavBar from '../components/TopNavBar';
 
 const HomePage = () => {
     
@@ -88,6 +89,7 @@ const HomePage = () => {
     getCurrentUserId();
     return(
         <div className="App">
+            <TopNavBar title="home"/>
             <CreatePlaylistForm userId={userId} selectedTracks={selectedList}></CreatePlaylistForm>
             <SectionTitle title="Search your favorite tracks!"/>
             <br></br>
