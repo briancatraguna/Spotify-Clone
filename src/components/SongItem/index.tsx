@@ -4,6 +4,7 @@ import './style.css';
 import PropTypes from 'prop-types';
 
 type Props = {
+    type: string,
     status: boolean,
     pushToSelectedList: any,
     deleteFromSelectedList: any,
@@ -15,7 +16,7 @@ type Props = {
 }
 
 const SongItem = ({
-    status,pushToSelectedList,deleteFromSelectedList,id,imgUrl,songTitle,artistLink,artist
+    type,status,pushToSelectedList,deleteFromSelectedList,id,imgUrl,songTitle,artistLink,artist
 }: Props) => {
 
     const [statusState,setStatusState] = useState(status)
@@ -36,6 +37,17 @@ const SongItem = ({
         button = <button className="deselectButton" onClick={showAlert}>Deselect</button>
     }
 
+    console.log(type)
+    if (type=="recommendation"){
+        return (
+            <div className="itemContainer">
+                <img src={imgUrl} alt={`${songTitle}`}/>
+                <p className="songTitle">{songTitle}</p>
+                <a className="artist" href={artistLink}>{artist}</a>
+            </div>
+        )
+    }
+
     return (
             <div className="itemContainer">
                 <img src={imgUrl} alt={`${songTitle}`}/>
@@ -50,6 +62,7 @@ const SongItem = ({
 export default SongItem;
 
 SongItem.propTypes = {
+    type: PropTypes.bool,
     status: PropTypes.bool,
     pushToSelectedList: PropTypes.any,
     id: PropTypes.string,
@@ -57,5 +70,5 @@ SongItem.propTypes = {
     imgUrl: PropTypes.string,
     songTitle: PropTypes.string,
     artistLink: PropTypes.string,
-    artist: PropTypes.string
+    artist: PropTypes.string,
 }

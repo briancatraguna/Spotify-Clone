@@ -72,6 +72,7 @@ const HomePage = () => {
             const status = getStatus(item.uri)
             return (
                 <SongItem
+                    type="normal"
                     key = {item.id}
                     imgUrl = {item.album.images[0].url}
                     songTitle = {item.name}
