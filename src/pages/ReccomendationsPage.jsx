@@ -9,6 +9,7 @@ const ReccomendationsPage = () => {
 
     const {accessTokenBearer} = useSelector((state) => state.token);
     const [genres,setGenres] = useState([])
+    const [selectedGenre,setSelectedGenre] = useState("")
 
     const GENRES_BASE_URL = "https://api.spotify.com/v1/recommendations/available-genre-seeds"
 
@@ -25,9 +26,14 @@ const ReccomendationsPage = () => {
         getGenres()
       }, []); 
 
+    function handleChange(e){
+        setSelectedGenre(e.target.value);
+        console.log(selectedGenre);
+    }
+
     let selectComponent;
     if (genres.length>0 || genres==null){
-        selectComponent = <Select className="selectStyle" labelId="label" id="genres">
+        selectComponent = <Select onChange={handleChange} className="selectStyle" labelId="label" id="genres">
             {genres.map((item)=>{
                 return <MenuItem key={item} value={item}>{item}</MenuItem>
             })}
