@@ -20,36 +20,40 @@ const CreatePlaylistForm = ({userId,selectedTracks}: Props) => {
 
     const handleSubmit = async (e: React.ChangeEvent<any>) => {
         e.preventDefault();
-        try {
-            const endpoint: string = `https://api.spotify.com/v1/users/${userId}/playlists`;
-            const response: AxiosResponse<any> = await axios.post(endpoint,{
-                name: title,
-                description: description,
-                collaborative: false,
-                public: false
-            },{
-                headers: {
-                    'Authorization': accessTokenBearer,
-                    'Accept': 'application/json',
-                    'Content-Type': 'application/json'
-                }
-            })
-            const id: string = response.data.id;
-            await axios({
-                method: 'post',
-                url: `https://api.spotify.com/v1/playlists/${id}/tracks`,
-                data: {
-                  uris: selectedTracks
-                },
-                headers: {
-                  'Authorization': accessTokenBearer,
-                  "Accept": "application/json",
-                  "Content-Type": "application/json"
-                }
-              })
-              alert(`Submitted ${title} playlist!`)
-        } catch(error){
-            console.error(error);
+        if (title.length<10 || description.length<20){
+            alert("Title must be minimum 10 characters\nDescription must be minimum 20 characters!")
+        } else {
+            try {
+                const endpoint: string = `https://api.spotify.com/v1/users/${userId}/playlists`;
+                const response: AxiosResponse<any> = await axios.post(endpoint,{
+                    name: title,
+                    description: description,
+                    collaborative: false,
+                    public: false
+                },{
+                    headers: {
+                        'Authorization': accessTokenBearer,
+                        'Accept': 'application/json',
+                        'Content-Type': 'application/json'
+                    }
+                })
+                const id: string = response.data.id;
+                await axios({
+                    method: 'post',
+                    url: `https://api.spotify.com/v1/playlists/${id}/tracks`,
+                    data: {
+                      uris: selectedTracks
+                    },
+                    headers: {
+                      'Authorization': accessTokenBearer,
+                      "Accept": "application/json",
+                      "Content-Type": "application/json"
+                    }
+                  })
+                  alert(`Submitted ${title} playlist!`)
+            } catch(error){
+                console.error(error);
+            }
         }
     }
         
