@@ -78,7 +78,15 @@ After putting the client id in the `.env` file you need to:
 ## Features 🚀
 
 ### Login Page
+This is where you can login to your own Spotify Account!
+<img src="https://user-images.githubusercontent.com/32363208/130087326-d513bd4e-e5f5-4954-a611-977a8f2ba1ec.jpeg" height=500/>
 
 ### Create Playlist Page
+In create playlist page, you can search your own favorite tracks and add it to your playlist! You can search any song you want and select them, then name your playlist and its description, you can submit!
+<img src="https://user-images.githubusercontent.com/32363208/130087550-811e8b06-9236-4689-bdfd-db7ba524ac64.jpeg" height=500/>
 
 ### Recommendations Page
+We can also recommend you songs for you to listen if you are confused what to listen! We give you any possible genres!
+<img src="https://user-images.githubusercontent.com/32363208/130087724-549d46a1-f083-4c44-af5a-5883a418a2ff.jpeg"/>
+and browse away!
+<img src="https://user-images.githubusercontent.com/32363208/130087989-06bb618d-c1bb-429b-803b-b769727c91c9.jpeg"/>
