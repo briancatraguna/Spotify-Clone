@@ -1,6 +1,7 @@
 h2 {
     width: fit-content;
     text-orientation: sideways;
+    display: inline-block;
 }
 
 .selected {
