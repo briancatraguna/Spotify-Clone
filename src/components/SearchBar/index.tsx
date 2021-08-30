@@ -41,7 +41,7 @@ const SearchBar = ({getData}: Props) => {
 
     return(
         <div>
-            <TextField className="textField" label="Type in your album" type="text" value={textInput} onChange={handleChange}></TextField>
+            <TextField className="textField" label="Type in your track" type="text" value={textInput} onChange={handleChange}></TextField>
             <Button variant="contained" color="primary" onClick={handleSearch}>Search</Button>
         </div>
     );
